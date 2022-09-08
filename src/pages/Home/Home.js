@@ -6,9 +6,13 @@ import List from "../../components/Home/List/List";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedRating, setSelectedRating] = useState(null);
   const handleSelectCategory = (event, value) =>
     // if not select category than show all or selected category => ? == if, === or
     !value ? null : setSelectedCategory(value);
+
+  const handleSelectRating = (event, value) =>
+    !value ? null : setSelectedRating(value);
   return (
     <div className="h-container">
       <Search />
@@ -17,6 +21,8 @@ const Home = () => {
           <Filter
             selectedCategory={selectedCategory}
             selectToggle={handleSelectCategory}
+            selectedRating={selectedRating}
+            selectRating={handleSelectRating}
           />
         </div>
         <div className="h-col">

@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     display: "flex",
-    gap: "20px",
+    gap: "10px",
     flexWrap: "wrap",
   },
   toggle: {
@@ -25,6 +25,7 @@ const MainCategory = ({ options, value, selectToggle }) => {
         value={value}
         onChange={selectToggle}
         className={classes.root}
+        exclusive
       >
         {options.map(({ label, id, value }) => (
           <ToggleButton className={classes.toggle} key={id} value={value}>
