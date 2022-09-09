@@ -1,10 +1,18 @@
 import React from "react";
+import "./list.css"
+import ProductList from "./ProductList/ProductList";
 
-const List = () => {
+const List = ({list}) => {
   return (
-    <div>
-      <h1>List</h1>
-    </div>
+    <>
+     <div className="l-cards">
+      {
+        list.map((item) => (
+          <ProductList key={item.id} item={item} />
+        ))
+      }
+     </div>
+    </>
   );
 };
 

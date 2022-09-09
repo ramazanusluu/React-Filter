@@ -3,13 +3,14 @@ import "./home.css";
 import Search from "../../components/Home/Search/Search";
 import Filter from "../../components/Home/Filter/Filter";
 import List from "../../components/Home/List/List";
-import { brand } from "../../data/data";
+import { brand, productsList } from "../../data/data";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedRating, setSelectedRating] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState([0, 500]);
   const [brands, setBrands] = useState(brand);
+  const [list, setList] = useState(productsList)
 
   const handleSelectCategory = (event, value) =>
     // if not select category than show all or selected category => ? == if, === or
@@ -45,7 +46,7 @@ const Home = () => {
           />
         </div>
         <div className="h-col">
-          <List />
+          <List list={list}/>
         </div>
       </div>
     </div>

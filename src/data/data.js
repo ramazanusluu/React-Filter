@@ -66,3 +66,51 @@ export const brand = [
     label: "Sneakers",
   },
 ];
+
+export const productsList = [
+  {
+    id: 1,
+    title: "Product 1",
+    category: "Men",
+    brand: "Adidas",
+    rating: 5,
+    price: 120,
+    img: "./assets/image/1.jpg",
+  },
+  {
+    id: 2,
+    title: "Product 2",
+    category: "Men",
+    brand: "Adidas",
+    rating: 5,
+    price: 112,
+    img: "./assets/image/2.jpg",
+  },
+  {
+    id: 3,
+    title: "Product 3",
+    category: "Men",
+    brand: "Adidas",
+    rating: 4,
+    price: 95,
+    img: "./assets/image/3.jpg",
+  },
+  {
+    id: 4,
+    title: "Product 4",
+    category: "Men",
+    brand: "Skechers",
+    rating: 3,
+    price: 80,
+    img: "./assets/image/4.jpg",
+  },
+  {
+    id: 5,
+    title: "Product 5",
+    category: "Women",
+    brand: "Sneakers",
+    rating: 5,
+    price: 100,
+    img: "./assets/image/5.jpg",
+  },
+];
