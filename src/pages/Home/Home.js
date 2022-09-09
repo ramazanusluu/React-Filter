@@ -4,6 +4,7 @@ import Search from "../../components/Home/Search/Search";
 import Filter from "../../components/Home/Filter/Filter";
 import List from "../../components/Home/List/List";
 import { brand, productsList } from "../../data/data";
+import Empty from "../../components/Partials/Empty/Empty";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -12,6 +13,7 @@ const Home = () => {
   const [brands, setBrands] = useState(brand);
   const [list, setList] = useState(productsList);
   const [inputSearch, setInputSearch] = useState("");
+  const [resultsFound, setResultsFound] = useState(false);
 
   const handleSelectCategory = (event, value) =>
     // if not select category than show all or selected category => ? == if, === or
@@ -82,6 +84,8 @@ const Home = () => {
     }
 
     setList(updateProductList);
+
+    !updateProductList.length ? setResultsFound(false) : setResultsFound(true);
   };
 
   useEffect(() => {
@@ -108,7 +112,7 @@ const Home = () => {
           />
         </div>
         <div className="h-col">
-          <List list={list} />
+          {resultsFound ? <List list={list} /> : <Empty />}
         </div>
       </div>
     </div>

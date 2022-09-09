@@ -1,10 +1,13 @@
 import React from "react";
+import "./empty.css"
 
 const Empty = () => {
   return (
-    <div>
-      <h1>Empty</h1>
-    </div>
+    <>
+      <div className="e-container">
+        <h2>No Products Found!</h2>
+      </div>
+    </>
   );
 };
 
