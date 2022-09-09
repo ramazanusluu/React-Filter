@@ -43,3 +43,26 @@ export const ratingList = [
     label: "5★",
   },
 ];
+
+export const brand = [
+  {
+    id: 1,
+    checked: false,
+    label: "Adidas",
+  },
+  {
+    id: 2,
+    checked: false,
+    label: "Skechers",
+  },
+  {
+    id: 3,
+    checked: false,
+    label: "Timberland",
+  },
+  {
+    id: 4,
+    checked: false,
+    label: "Sneakers",
+  },
+];

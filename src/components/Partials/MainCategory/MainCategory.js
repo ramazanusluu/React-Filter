@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     border: "none !important",
     color: "#111111  !important",
     padding: "5px 10px !important",
+    backgroundColor: "rgba(0, 0, 0, 0.12)",
   },
 });
 
