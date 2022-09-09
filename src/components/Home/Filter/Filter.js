@@ -3,6 +3,7 @@ import "./filter.css";
 import { categoryList, ratingList } from "../../../data/data";
 import MainCategory from "../../Partials/MainCategory/MainCategory";
 import Brand from "../../Partials/Brand/Brand";
+import Price from "../../Partials/Price/Price";
 
 const Filter = ({
   selectedCategory,
@@ -11,6 +12,8 @@ const Filter = ({
   selectRating,
   brands,
   changeChecked,
+  selectedPrice,
+  changePrice,
 }) => {
   return (
     <div className="f-container">
@@ -27,6 +30,10 @@ const Filter = ({
         {brands.map((brand) => (
           <Brand key={brand.id} brand={brand} changeChecked={changeChecked} />
         ))}
+      </div>
+      <div className="filter-group">
+        <h3 className="f-category">Price</h3>
+        <Price value={selectedPrice} changePrice={changePrice} />
       </div>
       <div className="filter-group">
         <h3 className="f-category">Star Rating</h3>

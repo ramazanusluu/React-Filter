@@ -8,6 +8,7 @@ import { brand } from "../../data/data";
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedRating, setSelectedRating] = useState(null);
+  const [selectedPrice, setSelectedPrice] = useState([0, 500]);
   const [brands, setBrands] = useState(brand);
 
   const handleSelectCategory = (event, value) =>
@@ -24,6 +25,9 @@ const Home = () => {
     );
     setBrands(changeCheckedBrands);
   };
+  const handleChangePrice = (event, value) => {
+    setSelectedPrice(value);
+  };
   return (
     <div className="h-container">
       <Search />
@@ -36,6 +40,8 @@ const Home = () => {
             selectRating={handleSelectRating}
             brands={brands}
             changeChecked={handleChangeChecked}
+            selectedPrice={selectedPrice}
+            changePrice={handleChangePrice}
           />
         </div>
         <div className="h-col">
